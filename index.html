@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/02f8c940af.js"></script>
   <title>Kanban board</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,7 +24,7 @@
     <div class="column">
       <div class="header-container">
         <h2 class="column-title">{{ name }}</h2>
-        <button class="btn-delete">X</button>
+        <button class="btn-delete"><i class="fas fa-times"></i></button>
         <button class="add-card">Add a card</button>
       </div>
       <ul id={{ id }} class="column-card-list"></ul>
@@ -33,7 +34,9 @@
   <script id="card-template" type="x-tmpl-mustache">
     <div class="card">
       <p class="card-description">{{ description }}</p>
-      <button class="btn-delete">X</button>
+      <button class="btn-delete"><i class="fas fa-times"></i></button>
+      <p class="card-comment">{{ comment }}</p>
+      <button class="btn-archive">To Archive</button>
     </div
   </script>
   
